@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=0.75">
+    <title>Simulador del Espectro Electromagnético y Ruido Blanco</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/destello.png" sizes="32x32">
+</head>
+
+<body>
+    <header>
+        <h1>Simulador del Espectro Electromagnético y Ruido Blanco</h1>
+    </header>
+    <main>
+        <div class="left-column">
+            <div class="faq-container">
+                <details id="elf-details">
+                    <summary>
+                        <span class="faq-title">Ondas ELF (Extremely Low Frequency)</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="expand-icon" width="24" height="24"
+                            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M9 6l6 6l-6 6"></path>
+                        </svg>
+                    </summary>
+                    <div class="faq-content">
+                        Características: Longitudes de onda extremadamente largas.<br>
+                        Aplicaciones: Comunicaciones submarinas, investigaciones geofísicas, penetración en agua y
+                        tierra.
+                    </div>
+                </details>
+                <details id="vlf-details">
+                    <summary>
+                        <span class="faq-title">Ondas VLF (Very Low Frequency)</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="expand-icon" width="24" height="24"
+                            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M9 6l6 6l-6 6"></path>
+                        </svg>
+                    </summary>
+                    <div class="faq-content">
+                        Características: Mayor penetración que las ELF, pero menor que las LF.<br>
+                        Aplicaciones: Comunicaciones submarinas, transmisión de señales de tiempo y frecuencia,
+                        navegación.
+                    </div>
+                </details>
+                <details id="lf-details">
+                    <summary>
+                        <span class="faq-title">Ondas LF (Low Frequency)</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="expand-icon" width="24" height="24"
+                            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M9 6l6 6l-6 6"></path>
+                        </svg>
+                    </summary>
+                    <div class="faq-content">
+                        Características: Capacidad de penetración moderada.<br>
+                        Aplicaciones: Radio AM, comunicación de largo alcance, sistemas de navegación.
+                    </div>
+                </details>
+                <details id="mf-details">
+                    <summary>
+                        <span class="faq-title">Ondas MF (Medium Frequency)</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="expand-icon" width="24" height="24"
+                            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M9 6l6 6l-6 6"></path>
+                        </svg>
+                    </summary>
+                    <div class="faq-content">
+                        Características: Penetración moderada, ondas más cortas que las LF.<br>
+                        Aplicaciones: Radio AM, comunicaciones marítimas, transmisión en áreas urbanas y suburbanas.
+                    </div>
+                </details>
+                <details id="hf-details">
+                    <summary>
+                        <span class="faq-title">Ondas HF (High Frequency)</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="expand-icon" width="24" height="24"
+                            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M9 6l6 6l-6 6"></path>
+                        </svg>
+                    </summary>
+                    <div class="faq-content">
+                        Características: Capacidad para rebotar en la ionosfera.<br>
+                        Aplicaciones: Radioafición, transmisión de radio internacional, comunicaciones militares.
+                    </div>
+                </details>
+                <details id="vhf-details">
+                    <summary>
+                        <span class="faq-title">Ondas VHF (Very High Frequency)</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="expand-icon" width="24" height="24"
+                            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M9 6l6 6l-6 6"></path>
+                        </svg>
+                    </summary>
+                    <div class="faq-content">
+                        Características: Buena calidad de transmisión, penetración limitada.<br>
+                        Aplicaciones: Televisión, radio FM, comunicaciones móviles.
+                    </div>
+                </details>
+                <details id="uhf-details">
+                    <summary>
+                        <span class="faq-title">Ondas UHF (Ultra High Frequency)</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="expand-icon" width="24" height="24"
+                            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M9 6l6 6l-6 6"></path>
+                        </svg>
+                    </summary>
+                    <div class="faq-content">
+                        Características: Ideal para comunicaciones a corta distancia.<br>
+                        Aplicaciones: Telefonía móvil, televisión digital, comunicaciones por satélite.
+                    </div>
+                </details>
+                <details id="shf-details">
+                    <summary>
+                        <span class="faq-title">Ondas SHF (Super High Frequency)</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="expand-icon" width="24" height="24"
+                            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M9 6l6 6l-6 6"></path>
+                        </svg>
+                    </summary>
+                    <div class="faq-content">
+                        Características: Buena capacidad para transmitir grandes cantidades de datos.<br>
+                        Aplicaciones: Comunicaciones inalámbricas, radares, sistemas de comunicación por microondas.
+                    </div>
+                </details>
+                <details id="infrared-details">
+                    <summary>
+                        <span class="faq-title">Infrarrojo</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="expand-icon" width="24" height="24"
+                            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M9 6l6 6l-6 6"></path>
+                        </svg>
+                    </summary>
+                    <div class="faq-content">
+                        Características: No visible al ojo humano.<br>
+                        Aplicaciones: Control remoto, imágenes térmicas, comunicaciones ópticas.
+                    </div>
+                </details>
+                <details id="visible-light-details">
+                    <summary>
+                        <span class="faq-title">Luz Visible</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="expand-icon" width="24" height="24"
+                            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M9 6l6 6l-6 6"></path>
+                        </svg>
+                    </summary>
+                    <div class="faq-content">
+                        Características: Perceptible por el ojo humano.<br>
+                        Aplicaciones: Visibilidad, fotografía, iluminación.
+                    </div>
+                </details>
+                <details id="uv-details">
+                    <summary>
+                        <span class="faq-title">Ultravioleta</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="expand-icon" width="24" height="24"
+                            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M9 6l6 6l-6 6"></path>
+                        </svg>
+                    </summary>
+                    <div class="faq-content">
+                        Características: Capaz de causar daños en tejidos biológicos.<br>
+                        Aplicaciones: Esterilización, fluorescencia, detección de falsificaciones.
+                    </div>
+                </details>
+                <details id="xray-details">
+                    <summary>
+                        <span class="faq-title">Rayos X</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="expand-icon" width="24" height="24"
+                            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M9 6l6 6l-6 6"></path>
+                        </svg>
+                    </summary>
+                    <div class="faq-content">
+                        Características: Capacidad de penetrar la materia y los tejidos.<br>
+                        Aplicaciones: Imágenes médicas, inspección de materiales.
+                    </div>
+                </details>
+                <details id="gamma-details">
+                    <summary>
+                        <span class="faq-title">Rayos Gamma</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="expand-icon" width="24" height="24"
+                            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M9 6l6 6l-6 6"></path>
+                        </svg>
+                    </summary>
+                    <div class="faq-content">
+                        Características: La mayor energía de todas las ondas electromagnéticas.<br>
+                        Aplicaciones: Tratamiento de cáncer, detección de materiales radiactivos.
+                    </div>
+                </details>
+
+            </div>
+        </div>
+        <div class="right-column">
+            <div id="info-box">LF (Low Frequency): 300 Hz - 3 kHz</div>
+            <nav>
+                <button type="button" data-info="ELF (Extremely Low Frequency): 3 Hz - 30 Hz"><span
+                        class="material-symbols-outlined">wifi</span></button>
+                <button type="button" data-info="VLF (Very Low Frequency): 30 Hz - 300 Hz"><span
+                        class="material-symbols-outlined">network_wifi</span></button>
+                <button type="button" data-info="LF (Low Frequency): 300 Hz - 3 kHz"><span
+                        class="material-symbols-outlined active">waves</span></button>
+                <button type="button" data-info="MF (Medium Frequency): 3 kHz - 30 kHz"><span
+                        class="material-symbols-outlined">radio</span></button>
+                <button type="button" data-info="HF (High Frequency): 30 kHz - 300 kHz"><span
+                        class="material-symbols-outlined">signal_cellular_4_bar</span></button>
+                <button type="button" data-info="VHF (Very High Frequency): 30 MHz - 300 MHz"><span
+                        class="material-symbols-outlined">tv</span></button>
+                <button type="button" data-info="UHF (Ultra High Frequency): 300 MHz - 3 GHz"><span
+                        class="material-symbols-outlined">smartphone</span></button>
+                <button type="button" data-info="SHF (Super High Frequency): 3 GHz - 30 GHz"><span
+                        class="material-symbols-outlined">microwave</span></button>
+                <button type="button" data-info="Infrarrojo: 300 GHz - 400 THz"><span
+                        class="material-symbols-outlined">nightlight</span></button>
+                <button type="button" data-info="Luz Visible: 400 THz - 800 THz"><span
+                        class="material-symbols-outlined">light_mode</span></button>
+                <button type="button" data-info="Ultravioleta: 800 THz - 30 PHz"><span
+                        class="material-symbols-outlined">brightness_high</span></button>
+                <button type="button" data-info="Rayos X: 30 PHz - 30 EHz"><span
+                        class="material-symbols-outlined">healing</span></button>
+                <button type="button" data-info="Rayos Gamma: Más de 30 EHz"><span
+                        class="material-symbols-outlined">radar</span></button>
+            </nav>
+
+            <div class="container">
+                <div class="box">
+                    <canvas id="sineCanvas"></canvas>
+                </div>
+
+                <div class="box">
+                    <canvas id="noiseCanvas"></canvas>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
